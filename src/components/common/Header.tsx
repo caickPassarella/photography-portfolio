@@ -1,9 +1,8 @@
 import {
   HeaderContainer,
-  HeaderContent,
-  ImgOverlay,
+  HeroTitleContainer,
+  HeroContent,
   Title,
-  Subtitle,
   Subtext,
 } from "./styles";
 import { Navbar } from "./Navbar";
@@ -14,14 +13,17 @@ export const Header: React.FC = () => {
 
   return (
     <HeaderContainer>
-      <ImgOverlay>
+      <HeroContent>
         <Navbar />
-        <HeaderContent>
-          <Title>Caick Passarella</Title>
-          <Subtitle>Hobbyist photographer</Subtitle>
-        </HeaderContent>
-        <Subtext>{subtext}</Subtext>
-      </ImgOverlay>
+        <HeroTitleContainer>
+          <Title>
+            HOBBYIST
+            <br />
+            PHOTOGRAPHER
+          </Title>
+          <Subtext>{subtext}</Subtext>
+        </HeroTitleContainer>
+      </HeroContent>
     </HeaderContainer>
   );
 };
