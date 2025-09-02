@@ -3,6 +3,12 @@ import { heroImage } from "../../assets/images";
 import { NavLink as RouterNavbLink } from "react-router-dom";
 import { media } from "../../utils/media";
 
+export const AppContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 20px;
+`;
+
 export const HeaderContainer = styled.header`
   background-image: url(${heroImage});
   background-size: cover;
@@ -26,8 +32,14 @@ export const HeroTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 0 4rem 6rem;
+  gap: 30px;
+  ${media.laptop`
+    padding: 0 0 4rem 4rem;
+  gap: 25px;
+    `}
   ${media.mobile`
-    padding: 3rem;
+    padding: 0 0 5rem 0;
+    align-items: center;
     `}
 `;
 
@@ -37,8 +49,11 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 2.8rem 6rem;
+  ${media.laptop`
+    padding: 2.5rem 4rem;
+  `}
   ${media.tablet`
-    padding: 2.5rem;
+    padding: 2.5rem 2rem;
   `}
   ${media.mobile`
     padding: 1.5rem;
@@ -50,7 +65,7 @@ export const NavList = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 2.8rem;
-  ${media.tablet`
+  ${media.laptop`
     gap: 2.5rem;
   `}
   ${media.mobile`
@@ -72,8 +87,8 @@ export const Logo = styled.p`
   line-height: 115%;
   letter-spacing: 0.15rem;
 
-  ${media.tablet`
-    font-size: 0.9rem;
+  ${media.laptop`
+    font-size: 1.5rem;
   `}
 `;
 
@@ -94,7 +109,7 @@ export const StyledNavLink = styled(RouterNavbLink)`
   font-weight: 200;
   line-height: 115%;
 
-  ${media.tablet`
+  ${media.laptop`
     font-size: 1rem;
   `}
 
@@ -116,10 +131,10 @@ export const Title = styled.h1`
     font-size: 5.5rem;
   `}
   ${media.tablet`
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   `}
   ${media.mobile`
-    font-size: 3rem;
+    font-size: 2rem;
     width: 100%;
   `}
   ${media.mobileS`
@@ -139,15 +154,69 @@ export const Subtext = styled.p`
   letter-spacing: 0.04063rem;
   width: 40rem;
   white-space: pre-wrap;
+  ${media.laptop`
+  width: 34rem;
+  font-size: 1.4rem;
+  `}
   ${media.tablet`
-    font-size: 0.8rem;
     width: 22rem;
+    font-size: 1.2rem;
   `}
   ${media.mobile`
-    font-size: 0.8rem;
-    width: 22rem;
+      width: 18rem;
+    font-size: 1rem;
   `}
-  ${media.mobileS`
-    width: 20rem;
-  `}
+`;
+
+// Sample Gallery component
+export const SampleGalleryContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`;
+
+export const Image = styled.img`
+  width: 50%;
+`;
+
+// Button
+export const PrimaryButton = styled.button`
+  font-family: "Roboto";
+  line-height: 115%;
+  letter-spacing: 0.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: none;
+  padding: 1rem;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  width: 13rem;
+  cursor: pointer;
+  &:hover {
+    background-color: #ffffff;
+    color: #1f1f1fff;
+  }
+`;
+
+export const SecondaryButton = styled.button`
+  font-family: "Roboto";
+  line-height: 115%;
+  letter-spacing: 0.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: none;
+  padding: 1rem;
+  border: 1px solid #1f1f1fff;
+  color: #1f1f1fff;
+  width: 13rem;
+  cursor: pointer;
+  &:hover {
+    background-color: #292929ff;
+    color: #ffffff;
+  }
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 22px;
 `;

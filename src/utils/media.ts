@@ -1,9 +1,10 @@
 import { css } from "styled-components";
 
 const sizes: { [key: string]: number } = {
-  mobileS: 375,
-  mobile: 640,
-  tablet: 992,
+  mobileS: 320,
+  mobile: 425,
+  tablet: 768,
+  laptop: 1024,
   desktop: 1200,
 };
 

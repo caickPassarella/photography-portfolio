@@ -4,8 +4,11 @@ import {
   HeroContent,
   Title,
   Subtext,
+  InputWrapper,
 } from "./styles";
 import { Navbar } from "./Navbar";
+import { Button } from "./Button";
+import { FaInstagram } from "react-icons/fa";
 
 export const Header: React.FC = () => {
   const subtext =
@@ -22,6 +25,10 @@ export const Header: React.FC = () => {
             PHOTOGRAPHER
           </Title>
           <Subtext>{subtext}</Subtext>
+          <InputWrapper>
+            <Button type="primary" text="MY GEAR" />
+            <FaInstagram cursor={"pointer"} size={35} color="white" />
+          </InputWrapper>
         </HeroTitleContainer>
       </HeroContent>
     </HeaderContainer>

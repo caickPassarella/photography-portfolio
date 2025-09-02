@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaInstagram } from "react-icons/fa";
 import {
   Nav,
   NavList,
@@ -15,12 +14,6 @@ export const Navbar: React.FC = () => {
 
   return (
     <Nav>
-      <IconWrapper>
-        <FaInstagram cursor={"pointer"} size={25} color="white" />
-      </IconWrapper>
-      <IconWrapper onClick={() => setIsMobileOpen(!isMobileOpen)}>
-        <GiHamburgerMenu cursor={"pointer"} size={25} color="white" />
-      </IconWrapper>
       <NavList>
         <NavItem>
           <StyledNavLink to="/">Home</StyledNavLink>
@@ -30,6 +23,9 @@ export const Navbar: React.FC = () => {
         </NavItem>
       </NavList>
       <Logo>Caick Passarella</Logo>
+      <IconWrapper onClick={() => setIsMobileOpen(!isMobileOpen)}>
+        <GiHamburgerMenu cursor={"pointer"} size={25} color="white" />
+      </IconWrapper>
       <NavList>
         <NavItem>
           <StyledNavLink to="/">About me</StyledNavLink>
@@ -38,7 +34,6 @@ export const Navbar: React.FC = () => {
           <StyledNavLink to="/">Contact</StyledNavLink>
         </NavItem>
       </NavList>
-      {/* <FaInstagram cursor={"pointer"} size={25} color="white" /> */}
     </Nav>
   );
 };
